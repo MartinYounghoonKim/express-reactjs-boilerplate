@@ -30,3 +30,10 @@ interface IServiceFailureResponse {
   isSuccess: false;
   message: string;
 }
+
+export enum AJAX_STATUS {
+  INITIAL = "INITIAL",
+  PENDING = "PENDING",
+  SUCCESS = "SUCCESS",
+  FAILURE = "FAILURE"
+}
