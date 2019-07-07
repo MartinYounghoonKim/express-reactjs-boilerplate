@@ -45,30 +45,5 @@
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.2"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "<rootDir>/**/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/**/*.d.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/**/?(*.)(spec|test|__tests__).{js,jsx,ts,tsx}"
-    ],
-    "modulePaths": [
-      "<rootDir>"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "<rootDir>/src"
-    ],
-    "testEnvironment": "jsdom",
-    "testURL": "https://martinworks.com",
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js",
-      ".(js|jsx)": "<rootDir>/node_modules/babel-jest"
-    },
-    "setupFiles": [
-      "<rootDir>/config/jest-setup.js"
-    ]
   }
 }
