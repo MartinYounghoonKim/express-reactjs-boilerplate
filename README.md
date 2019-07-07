@@ -6,8 +6,8 @@
 - [ ] Sequelize for ORM
 
 ### Frontend side spec
-- [ ] ReactJS
+- [x] ReactJS
 - [x] Typescript
-- [ ] Redux with Redux saga
-- [ ] Jest
+- [x] Redux with Redux saga
+- [x] Jest with Typescript
 
