@@ -1,3 +1,5 @@
+import {IExampleList} from "../../../@types/models/test";
+
 export const FETCH_EXAMPLE_REQUEST = "EXAMPLE/FETCH_EXAMPLE_REQUEST";
 export const FETCH_EXAMPLE_SUCCESS = "EXAMPLE/FETCH_EXAMPLE_SUCCESS";
 export const FETCH_EXAMPLE_FAILURE = "EXAMPLE/FETCH_EXAMPLE_FAILURE";
@@ -11,9 +13,10 @@ export const fetchExampleRequestAction = (): IFetchExampleRequest => ({
 
 interface IFetchExampleSuccess {
   type: typeof FETCH_EXAMPLE_SUCCESS;
+  payload: IExampleList;
 }
-export const fetchExampleSuccessAction = (): IFetchExampleSuccess => ({
-  type: FETCH_EXAMPLE_SUCCESS
+export const fetchExampleSuccessAction = (payload: IExampleList): IFetchExampleSuccess => ({
+  type: FETCH_EXAMPLE_SUCCESS, payload
 });
 
 interface IFetchExampleFailure {
