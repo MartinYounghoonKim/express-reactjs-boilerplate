@@ -1,11 +1,11 @@
-import {getMethod} from "./config";
+import { getMethod } from "./config";
 import { IServiceResponse } from "../@types/utils/ajax";
-import {ITest} from "../@types/models/test";
+import { IExampleList } from "../@types/models/test";
 
 
-export async function fetchTest (): Promise<IServiceResponse<ITest>> {
+export async function fetchExampleService (): Promise<IServiceResponse<IExampleList>> {
   const uri = "/test";
-  const response = await getMethod<ITest>(uri, {});
+  const response = await getMethod<IExampleList>(uri, {});
 
   if (!response.isSuccess) {
     const { isSuccess, errorData: { message } } = response;

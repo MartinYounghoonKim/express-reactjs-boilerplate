@@ -14,8 +14,8 @@ describe("예제 Action creator 함수에 대해서", () => {
     });
   });
   it("API를 패치 성공 액션 함수를 실행 시, API 요청 성공에 해당하는 객체를 반환한다.", () => {
-    expect(fetchExampleSuccessAction()).toEqual({
-      type: FETCH_EXAMPLE_SUCCESS,
+    expect(fetchExampleSuccessAction([])).toEqual({
+      type: FETCH_EXAMPLE_SUCCESS, payload: []
     });
   });
   it("API를 패치 실패 액션 함수를 실행 시, API 요청 실패에 해당하는 객체를 반환한다.", () => {
