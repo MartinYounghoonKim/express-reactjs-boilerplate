@@ -7,12 +7,14 @@ const Todos = require("../src/models/index").Todos;
 router.get('/', async function (req, res, next) {
   try {
     const users = await User.findAll();
-    console.log(users);
-    await Todos.create({
-      text: "aaa",
-      isDone: "true"
-    });
-    res.send(200).json(users);
+    const todos = await Todos.findAll();
+    console.log("User =>", User);
+    console.log("Todos =>", Todos);
+    // await Todos.create({
+    //   text: "aaa",
+    //   isDone: "true"
+    // });
+    res.json(todos);
   } catch (e) {
     console.log("error =>", e);
   }
