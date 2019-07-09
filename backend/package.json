@@ -4,6 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "db:init": "npx sequelize init",
+    "db:init:models": "npx sequelize init:models",
+    "db:generate": "npx sequelize model:generate --name User --attributes firstName:string,lastName:string,email:string",
+    "db:seeder": "npx sequelize seed:generate --name demo-user",
+    "db:migrate": "npx sequelize db:migrate",
     "dev": "nodemon --exec babel-node ./bin/www"
   },
   "dependencies": {
@@ -14,11 +19,15 @@
     "express": "~4.15.5",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
+    "sequelize": "^5.9.4",
+    "serve-favicon": "~2.4.5",
+    "sqlite3": "^4.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
-    "nodemon": "^1.19.1"
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.19.1",
+    "sequelize-cli": "^5.5.0"
   }
 }
