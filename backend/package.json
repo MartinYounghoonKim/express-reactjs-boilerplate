@@ -6,8 +6,7 @@
     "start": "node ./bin/www",
     "db:init": "npx sequelize init",
     "db:init:models": "npx sequelize init:models",
-    "db:generate": "npx sequelize model:generate --name User --attributes firstName:string,lastName:string,email:string",
-    "db:seeder": "npx sequelize seed:generate --name demo-user",
+    "db:seed": "npx sequelize db:seed:all",
     "db:migrate": "npx sequelize db:migrate",
     "dev": "nodemon --exec babel-node ./bin/www"
   },
