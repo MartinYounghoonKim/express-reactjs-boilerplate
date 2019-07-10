@@ -1,20 +1,21 @@
 var express = require('express');
 var router = express.Router();
-const User = require("../src/models/index").User;
-const Todos = require("../src/models/index").Todos;
+const User = require("../database/models/index").User;
+const Todos = require("../database/models/index").Todos;
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
   try {
     const users = await User.findAll();
     const todos = await Todos.findAll();
-    console.log("User =>", User);
-    console.log("Todos =>", Todos);
-    // await Todos.create({
-    //   text: "aaa",
-    //   isDone: "true"
-    // });
-    res.json(todos);
+    await Todos.create({
+      text: "aaa",
+      isDone: "true"
+    });
+    res.json({
+      todos,
+      users
+    });
   } catch (e) {
     console.log("error =>", e);
   }
